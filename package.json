@@ -1,0 +1,19 @@
+{
+  "name": "theanimedb",
+  "version": "1.0.0",
+  "description": "A page about anime, using html, css, js, sass",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EdCenten0/TheAnimeDB.git"
+  },
+  "author": "Carlos Chavarria Centeno - @EdCenten0 (cchavarriacenteno8@gmail.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/EdCenten0/TheAnimeDB/issues"
+  },
+  "homepage": "https://github.com/EdCenten0/TheAnimeDB#readme"
+}
