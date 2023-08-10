@@ -1,3 +1,30 @@
+
+//Pallete
+$purple: #35155D;
+$light-purple: #512B81;
+$light-blue: #4477CE;
+$very-light-blue:#8CABFF;
+$yellowhish-white:#F6F4EB;
+$black:#252525;
+
+//Font
+$font:'Dosis', sans-serif;
+$very-large:6rem;
+$large:5rem;
+$medium:3rem;
+$small:2.5rem;
+
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 .inactive{
     display: none;
 }
