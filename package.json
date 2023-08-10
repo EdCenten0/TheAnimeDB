@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/EdCenten0/TheAnimeDB/issues"
   },
-  "homepage": "https://github.com/EdCenten0/TheAnimeDB#readme"
+  "homepage": "https://github.com/EdCenten0/TheAnimeDB#readme",
+  "dependencies": {
+    "sass": "^1.64.2"
+  }
 }
