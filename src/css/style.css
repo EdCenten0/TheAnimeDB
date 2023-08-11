@@ -6,10 +6,71 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Dosis", sans-serif;
+}
+
+.header--principal {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://i.blogs.es/32a9c2/jujutsu-kaisen_img/1366_2000.jpeg");
+  background-size: cover;
+  height: 50rem;
+  background-repeat: no-repeat;
+  background-position-y: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header--principal img {
+  width: 5rem;
+  filter: brightness(200%);
+}
+.header--principal section {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.header--principal section form .header--input {
+  width: 90vw;
+  height: 4rem;
+  border-radius: 12px 0 0 12px;
+  color: #252525;
+  border: none;
+}
+.header--principal section form .header--input:focus {
+  outline: solid #4477CE;
+}
+.header--principal section form div {
+  display: flex;
+}
+.header--principal section form div .header--search_button {
+  width: 5rem;
+  border-radius: 0 12px 12px 0;
+  border: none;
+  background-color: #512B81;
+}
+.header--principal section form div .header--search_button img {
+  padding-top: 0.5rem;
+  width: 70%;
+}
+.header--principal section form div .header--search_button:hover {
+  cursor: pointer;
 }
 
 .inactive {
   display: none;
+}
+
+.header--title {
+  margin: 0;
+  color: #35155D;
+  font-size: 4rem;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  flex-shrink: 0;
+  filter: brightness(180%);
+  -webkit-text-stroke: 1px #ffffff;
 }
 
 /*# sourceMappingURL=style.css.map */
