@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html {
   font-size: 62.5%;
 }
@@ -10,6 +11,16 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  display: flex;
+}
+
+.return--arrow {
+  margin: 1rem 0 0 0;
+  position: fixed;
+  z-index: 1;
+}
+.return--arrow img {
+  width: 5rem;
 }
 
 .header--principal {
@@ -21,10 +32,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-.header--principal img {
-  width: 5rem;
-  filter: brightness(200%);
 }
 .header--principal section {
   width: 100%;
@@ -100,7 +107,11 @@ main .generic_list--carousel {
   white-space: nowrap;
   height: 24rem;
   padding-left: 2rem;
-  padding-bottom: 1rem;
+  padding-bottom: 0rem;
+  max-width: calc(100vw - 38rem);
+}
+main .generic_list--carousel::-webkit-scrollbar {
+  width: 1rem;
 }
 main .generic_list--carousel .card-container {
   display: inline-block;
@@ -115,6 +126,60 @@ main .generic_list--carousel .card-image {
   max-width: 15rem;
   border-radius: 8px;
   cursor: pointer;
+}
+main .main--content_description {
+  margin: 2rem;
+}
+main .main--content_description h3 {
+  margin: 0;
+  color: #252525;
+  font-size: 3rem;
+  margin-bottom: 0;
+  font-weight: 800;
+}
+main .main--content_description p {
+  color: #252525;
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+main .main--content_description--info p {
+  font-weight: 500;
+}
+main .categoryPreview--container {
+  margin: 0 2rem;
+}
+main .categoryPreview--container .categoriesPreview--title {
+  font-size: 2rem;
+}
+main .categoryPreview--container .categoryPreview--list .category-container {
+  width: 45%;
+}
+main .categoryPreview--container .category--title {
+  margin-bottom: 8px;
+  cursor: pointer;
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: 1.5rem;
+  text-overflow: ellipsis;
+}
+main .categoryPreview--container .category--title::before {
+  content: "••••";
+  color: transparent;
+  /* TODO: cambiar color por ID de la categoría */
+  background-color: #35155D;
+  border-radius: 5px;
+  margin-right: 8px;
+  width: 12px;
+  height: 12px;
+}
+
+.aside {
+  top: 0;
+}
+.aside img {
+  height: 100vh;
+  width: 30rem;
+  filter: blur(0.5px) brightness(120%);
 }
 
 .footer {
@@ -131,7 +196,7 @@ main .generic_list--carousel .card-image {
 }
 
 .inactive {
-  display: none;
+  display: none !important;
 }
 
 .header--title {
