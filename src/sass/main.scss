@@ -13,7 +13,7 @@ $font:'Dosis', sans-serif;
 $very-large:6rem;
 $large:5rem;
 $medium:3rem;
-$small:2.5rem;
+$small:2rem;
 
 //General
 
@@ -21,11 +21,14 @@ html{
     font-size: 62.5%;
 }
 
+*{
+    font-family: $font;
+}
+
 body{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: $font;
 }
 
 //Header
@@ -60,7 +63,7 @@ body{
 
         form{
             .header--input{
-                width: 90vw;
+                width: 80vw;
                 height: 4rem;
                 border-radius: 12px 0 0 12px;
                 color: $black;
@@ -96,6 +99,65 @@ body{
     }
 }
 
+//Main
+
+main{
+    .generic_list{
+        display: flex;
+        flex-direction: column;
+        margin: 0 2rem;
+
+        &--header{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            h3{
+                color: #252525;
+                font-size: 2rem;
+                font-style: normal;
+                font-weight: 800;
+                line-height: normal;
+            }
+
+            button{
+                background-color: $light-purple;
+                color: $white;
+                width: 10rem;
+                font-weight: 600;
+                height: 3rem;
+                border-radius: 5px;
+                border: none;
+            }
+        }
+
+        &--carousel{
+            overflow-x: scroll;
+            overflow-y: hidden;
+            white-space: nowrap;
+            height: 24rem;
+            padding-left: 2rem;
+            padding-bottom: 1rem;
+
+            .card-container{
+                display: inline-block;
+                margin-right: 1rem;
+            }
+
+            .card-image{
+                height: 22rem;
+                min-height: 22rem;
+                max-height: 22rem;
+                width: 15rem;
+                min-width: 15rem;
+                max-width: 15rem;
+                border-radius: 8px;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
 .inactive{
     display: none;
 }
@@ -105,7 +167,7 @@ body{
     color: $purple;
     font-size: 4rem;
     font-style: normal;
-    font-weight: 800;
+    font-weight: 900;
     line-height: normal;
     flex-shrink: 0;
     // text-shadow: $white 1px 0px 10px ;

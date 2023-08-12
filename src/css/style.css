@@ -2,11 +2,14 @@ html {
   font-size: 62.5%;
 }
 
+* {
+  font-family: "Dosis", sans-serif;
+}
+
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Dosis", sans-serif;
 }
 
 .header--principal {
@@ -31,7 +34,7 @@ body {
   justify-content: center;
 }
 .header--principal section form .header--input {
-  width: 90vw;
+  width: 80vw;
   height: 4rem;
   border-radius: 12px 0 0 12px;
   color: #252525;
@@ -57,6 +60,55 @@ body {
   cursor: pointer;
 }
 
+main .generic_list {
+  display: flex;
+  flex-direction: column;
+  margin: 0 2rem;
+}
+main .generic_list--header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main .generic_list--header h3 {
+  color: #252525;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+}
+main .generic_list--header button {
+  background-color: #512B81;
+  color: #ffffff;
+  width: 10rem;
+  font-weight: 600;
+  height: 3rem;
+  border-radius: 5px;
+  border: none;
+}
+main .generic_list--carousel {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+  height: 24rem;
+  padding-left: 2rem;
+  padding-bottom: 1rem;
+}
+main .generic_list--carousel .card-container {
+  display: inline-block;
+  margin-right: 1rem;
+}
+main .generic_list--carousel .card-image {
+  height: 22rem;
+  min-height: 22rem;
+  max-height: 22rem;
+  width: 15rem;
+  min-width: 15rem;
+  max-width: 15rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
 .inactive {
   display: none;
 }
@@ -66,7 +118,7 @@ body {
   color: #35155D;
   font-size: 4rem;
   font-style: normal;
-  font-weight: 800;
+  font-weight: 900;
   line-height: normal;
   flex-shrink: 0;
   filter: brightness(180%);
