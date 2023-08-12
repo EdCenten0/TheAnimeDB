@@ -97,7 +97,6 @@ body{
                         width: 70%;
                     }
                     
-
                     &:hover{
                         cursor: pointer;
                     }
@@ -165,6 +164,23 @@ main{
             }
         }
     }
+}
+
+// Footer
+
+.footer{
+    background-color: $purple;
+    height: 12rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    p{
+        color: $white;
+        font-size: $small;
+        font-weight: 600;
+    }
+    
 }
 
 .inactive{

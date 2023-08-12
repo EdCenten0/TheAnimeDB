@@ -117,6 +117,19 @@ main .generic_list--carousel .card-image {
   cursor: pointer;
 }
 
+.footer {
+  background-color: #35155D;
+  height: 12rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.footer p {
+  color: #ffffff;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
 .inactive {
   display: none;
 }
