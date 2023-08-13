@@ -8,8 +8,8 @@ const contentAside = document.getElementById("contentAside");
 const contentTitle = document.getElementById("contentTitle");
 const contentSubTitle = document.getElementById("contentSubTitle");
 const contentInfo = document.getElementById("contentSubTitle");
-const categotyPreviewContainer = document.getElementById(
-  "categotyPreviewContainer"
+const categoryPreviewContainer = document.getElementById(
+  "categoryPreviewContainer"
 );
 const categoriesPreviewTitle = document.getElementById(
   "categoriesPreviewTitle"
