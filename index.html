@@ -12,8 +12,8 @@
     />
     <link rel="stylesheet" href="./src/css/style.css" />
   </head>
-  <body class="figures2">
-    <section class="return--arrow">
+  <body id="body" class="figures2">
+    <section class="return--arrow" id="returnArrow">
       <img
         src="./src/imgs/return-arrow.svg"
         alt="return-arrow"
@@ -21,7 +21,7 @@
         class="inactive"
       />
     </section>
-    <header class="header--principal">
+    <header class="header--principal" id="headerPrincipal">
       <section>
         <form>
           <h3 class="header--title">TheAnimeDB</h3>
@@ -36,15 +36,18 @@
     </header>
 
     <main class="main--principal">
-      <section class="main--content_description inactive">
-        <aside class="aside">
+      <section
+        class="main--content_description inactive"
+        id="mainContentDescription"
+      >
+        <aside class="aside" id="contentAside">
           <img src="./src/imgs/banner.png" alt="banner" class="aside--banner" />
         </aside>
         <div>
-          <h3>Cowboy Bebbop</h3>
-          <p>Produced by Bandai</p>
+          <h3 id="contentTitle">Cowboy Bebbop</h3>
+          <p id="contentSubTitle">Produced by Bandai</p>
           <div class="main--content_description--info">
-            <p>
+            <p id="contentInfo">
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam
               excepturi numquam, facilis, commodi reprehenderit voluptates
               dignissimos delectus rem unde laborum, voluptas repudiandae
@@ -76,10 +79,15 @@
         </div>
       </section>
 
-      <section class="categoryPreview--container inactive">
-        <h3 class="categoriesPreview--title">Categories</h3>
-        <article class="categoryPreview--list">
-          <div class="category-container">
+      <section
+        class="categoryPreview--container inactive"
+        id="categotyPreviewContainer"
+      >
+        <h3 class="categoriesPreview--title" id="categoriesPreviewTitle">
+          Categories
+        </h3>
+        <article class="categoryPreview--list" id="categoryPreviewList">
+          <div class="category-container" id="categoryContainer">
             <p class="category--title">Love</p>
           </div>
           <div class="category-container">
@@ -88,17 +96,22 @@
         </article>
       </section>
 
-      <section class="generic_list">
-        <article class="generic_list--header">
-          <h3 class="generic_list--title">Top Recent Animes</h3>
-          <button class="generic_list--button">Ver más</button>
+      <section class="generic_list" id="genericList">
+        <article class="generic_list--header" id="genericListHeader">
+          <h3 class="generic_list--title" id="genericListTitle">
+            Top Recent Animes
+          </h3>
+          <button class="generic_list--button" id="genericListButton">
+            Ver más
+          </button>
         </article>
 
-        <article class="generic_list--carousel">
-          <div class="card-container">
+        <article class="generic_list--carousel" id="genericListCarousel">
+          <div class="card-container" id="genericListCardContainer">
             <img
               src="https://i.blogs.es/32a9c2/jujutsu-kaisen_img/1366_2000.jpeg"
               class="card-image"
+              id="cardImage"
               alt="img"
             />
           </div>
@@ -182,7 +195,7 @@
         </article>
       </section>
     </main>
-    <footer class="footer">
+    <footer class="footer" id="footer">
       <div class="footer--disclaimer">
         <p>Developed by Carlos Chavarria Centeno - @EdCenten0</p>
       </div>
@@ -190,5 +203,8 @@
         <p>Contact me on: cchavarriacenteno8@gmail.com</p>
       </div>
     </footer>
+
+    <script src="./src/js/nodes.js"></script>
+    <script src="./src/js/main.js"></script>
   </body>
 </html>
