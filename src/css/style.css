@@ -11,7 +11,6 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  display: flex;
 }
 
 .return--arrow {
@@ -108,7 +107,6 @@ main .generic_list--carousel {
   height: 24rem;
   padding-left: 2rem;
   padding-bottom: 0rem;
-  max-width: calc(100vw - 38rem);
 }
 main .generic_list--carousel::-webkit-scrollbar {
   width: 1rem;
@@ -128,21 +126,35 @@ main .generic_list--carousel .card-image {
   cursor: pointer;
 }
 main .main--content_description {
-  margin: 2rem;
+  margin: 2rem 4rem;
+  display: grid;
+  grid-template-columns: 1fr 10fr;
+  gap: 3rem;
+  width: fit-content;
 }
-main .main--content_description h3 {
+main .main--content_description .aside {
+  width: fit-content;
+}
+main .main--content_description .aside img {
+  border-radius: 4px;
+  border: solid 1px #252525;
+  width: 100%;
+  height: 100%;
+  filter: blur(0.5px) brightness(120%);
+}
+main .main--content_description div h3 {
   margin: 0;
   color: #252525;
   font-size: 3rem;
   margin-bottom: 0;
   font-weight: 800;
 }
-main .main--content_description p {
+main .main--content_description div p {
   color: #252525;
   font-size: 1.5rem;
   font-weight: 300;
 }
-main .main--content_description--info p {
+main .main--content_description div .main--content_description--info p {
   font-weight: 500;
 }
 main .categoryPreview--container {
@@ -173,15 +185,6 @@ main .categoryPreview--container .category--title::before {
   height: 12px;
 }
 
-.aside {
-  top: 0;
-}
-.aside img {
-  height: 100vh;
-  width: 30rem;
-  filter: blur(0.5px) brightness(120%);
-}
-
 .footer {
   background-color: #35155D;
   height: 12rem;
@@ -209,6 +212,10 @@ main .categoryPreview--container .category--title::before {
   flex-shrink: 0;
   filter: brightness(180%);
   -webkit-text-stroke: 1px #ffffff;
+}
+
+.figures {
+  background-image: url("./../imgs/Polygon 1.svg"), url("./../imgs/Polygon 2.svg");
 }
 
 /*# sourceMappingURL=style.css.map */

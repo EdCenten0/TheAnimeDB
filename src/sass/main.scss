@@ -30,7 +30,7 @@ body{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    display: flex;
+    // display: flex;
 }
 
 //Header
@@ -155,7 +155,7 @@ main{
             height: 24rem;
             padding-left: 2rem;
             padding-bottom: 0rem;
-            max-width: calc(100vw - 38rem);
+            // max-width: calc(100vw - 38rem);
 
             &::-webkit-scrollbar{
                 width: 1rem;
@@ -180,26 +180,44 @@ main{
     }
 
     .main--content_description{
-
-        margin:  2rem;
-
-        h3{
-            margin: 0;
-            color: $black;
-            font-size: $medium;
-            margin-bottom: 0;
-            font-weight: 800;
+        margin:  2rem 4rem;
+        display: grid;
+        grid-template-columns: 1fr 10fr;
+        gap: 3rem;
+        
+        width: fit-content;
+        
+        
+        .aside{
+            width: fit-content;
+            img{
+                border-radius: 4px;
+                border: solid 1px $black;
+                width: 100%;
+                height: 100%;
+                filter: blur(.5px) brightness(120%);
+            }
         }
 
-        p{
-            color: $black;
-            font-size: $very-small;
-            font-weight: 300;
-        }
-
-        &--info{
+        div{
+            h3{
+                margin: 0;
+                color: $black;
+                font-size: $medium;
+                margin-bottom: 0;
+                font-weight: 800;
+            }
+    
             p{
-                font-weight: 500;
+                color: $black;
+                font-size: $very-small;
+                font-weight: 300;
+            }
+    
+            .main--content_description--info{
+                p{
+                    font-weight: 500;
+                }
             }
         }
     }
@@ -241,14 +259,7 @@ main{
 
 //aside
 
-.aside{
-    top: 0;
-    img{
-        height: 100vh;
-        width:30rem;
-        filter: blur(.5px) brightness(120%);
-    }
-}
+
 
 // Footer
 
@@ -285,3 +296,6 @@ main{
     
 }
 
+.figures{
+    background-image: url("./../imgs/Polygon\ 1.svg"), url("./../imgs/Polygon\ 2.svg");
+}
