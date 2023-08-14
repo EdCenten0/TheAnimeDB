@@ -16,14 +16,27 @@ const categoriesPreviewTitle = document.getElementById(
 );
 const categoryPreviewList = document.getElementById("categoryPreviewList");
 const categoryContainer = document.getElementById("categoryContainer");
-const genericList = document.getElementById("genericList");
-const genericListHeader = document.getElementById("genericListHeader");
-const genericListTitle = document.getElementById("genericListTitle");
-const genericListButton = document.getElementById("genericListButton");
-const genericListCarousel = document.getElementById("genericListCarousel");
-const genericListCardContainer = document.getElementById(
-  "genericListCardContainer"
+const animeTrendsList = document.getElementById("animeTrendsList");
+const animeTrendsListHeader = document.querySelector(
+  "#animeTrendsList #genericListHeader"
 );
-const cardImage = document.getElementById("cardImage");
+const animeTrendsListTitle = document.querySelector(
+  "#animeTrendsList #genericListTitle"
+);
+const animeTrendsListButton = document.querySelector(
+  "#animeTrendsList #genericListButton"
+);
+const animeTrendsListCarousel = document.querySelector(
+  "#animeTrendsList #genericListCarousel"
+);
+const animeTrendsListCardContainer = document.querySelector(
+  "animeTrendsList #genericListCardContainer"
+);
+const animeTrendsCardImage = document.querySelector(
+  "#animeTrendsList #cardImage"
+);
 const footer = document.getElementById("footer");
-console.log(body);
+
+console.log(animeTrendsList);
+console.log(animeTrendsCardImage);
+console.log(animeTrendsListCarousel);

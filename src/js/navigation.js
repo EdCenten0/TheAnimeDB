@@ -1,10 +1,10 @@
 function navigation() {
-  if (location.hash.startsWith("#home")) {
-    homePage();
-  } else if (location.hash.startsWith("#trends")) {
+  if (location.hash.startsWith("#trends")) {
     animeTrends();
   } else if (location.hash.startsWith("#anime=")) {
     animeDetails();
+  } else {
+    homePage();
   }
 
   location.hash;
@@ -20,8 +20,9 @@ function homePage() {
   contentSubTitle.classList.add("inactive");
   contentInfo.classList.add("inactive");
   categoryPreviewContainer.classList.add("inactive");
-  genericList.classList.remove("inactive");
+  animeTrendsList.classList.remove("inactive");
   footer.classList.remove("inactive");
+  getAnimetrends();
 }
 
 function animeTrends() {
@@ -34,7 +35,7 @@ function animeTrends() {
   contentSubTitle.classList.add("inactive");
   contentInfo.classList.add("inactive");
   categoryPreviewContainer.classList.add("inactive");
-  genericList.classList.remove("inactive");
+  animeTrendsList.classList.remove("inactive");
   footer.classList.remove("inactive");
   console.log(returnArrow);
 }
@@ -58,7 +59,7 @@ genericListButton.addEventListener("click", () => {
   location.hash = "#trends";
 });
 
-cardImage.addEventListener("click", () => {
+animeTrendsCardImage.addEventListener("click", () => {
   location.hash = "#anime=";
 });
 

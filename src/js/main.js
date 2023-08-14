@@ -5,7 +5,7 @@ const api = axios.create({
   },
 });
 
-async function creteAnimeList(animes, container, quantity) {
+async function createAnimeGenericList(animes, container) {
   container.innerHTML = "";
 
   animes.forEach((anime) => {
@@ -17,9 +17,9 @@ async function creteAnimeList(animes, container, quantity) {
     });
 
     const animeImg = document.createElement("img");
-    animeImg.classList.add("cardImage");
+    animeImg.classList.add("card-image");
     animeImg.setAttribute("alt", anime.title);
-    animeImg.setAttribute("src", anime.jpg.image_url);
+    animeImg.setAttribute("src", anime.images.jpg.image_url);
 
     animeContainer.appendChild(animeImg);
     container.appendChild(animeContainer);
@@ -27,15 +27,15 @@ async function creteAnimeList(animes, container, quantity) {
 }
 
 async function getAnimetrends() {
-  const res = await api("top/anime", {
+  const { data } = await api("top/anime", {
     params: {
       type: "tv",
       filter: "airing",
-      rating: "g",
       sfw: true,
     },
   });
 
-  const trendingAnimes = res.data;
-  return trendingAnimes;
+  const animes = data.data;
+  console.log(data);
+  createAnimeGenericList(animes, animeTrendsListCarousel);
 }
