@@ -7,7 +7,7 @@ const mainContentDescription = document.getElementById(
 const contentAside = document.getElementById("contentAside");
 const contentTitle = document.getElementById("contentTitle");
 const contentSubTitle = document.getElementById("contentSubTitle");
-const contentInfo = document.getElementById("contentSubTitle");
+const contentInfo = document.getElementById("contentInfo");
 const categoryPreviewContainer = document.getElementById(
   "categoryPreviewContainer"
 );

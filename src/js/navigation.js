@@ -58,6 +58,9 @@ function animeDetails() {
   animeTrendsGallery.classList.add("inactive");
   footer.classList.remove("inactive");
   console.log("Si");
+
+  let [_, animeId] = location.hash.split("=");
+  getAnimeDetailsById(animeId);
 }
 
 animeTrendsListButton.addEventListener("click", () => {

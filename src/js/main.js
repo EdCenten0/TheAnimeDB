@@ -49,6 +49,22 @@ async function createAnimeGallery(animes, container) {
   });
 }
 
+async function setAnimeDetails(anime) {
+  // anime.forEach((anime) => {
+
+  contentAside.innerHTML = "";
+  contentTitle.innerHTML = "";
+  contentSubTitle.innerHTML = "";
+  contentInfo.innerHTML = "";
+
+  contentAside.setAttribute("src", anime.images.jpg.image_url);
+  contentAside.setAttribute("alt", anime.title);
+  contentTitle.innerText = anime.title;
+  contentSubTitle.innerText = "Produced by " + anime.producers[0].name;
+  contentInfo.innerText = anime.synopsis;
+  // });
+}
+
 async function getAnimetrends() {
   const { data } = await api("top/anime", {
     params: {
@@ -67,4 +83,11 @@ async function getRecommendedAnimes() {
   const { data } = await api("recommendations/anime");
   const animes = data.data;
   createAnimeGallery(animes, animeTrendsGallery);
+}
+
+async function getAnimeDetailsById(id) {
+  const { data } = await api(`anime/${id}/full`);
+  const anime = data.data;
+
+  setAnimeDetails(anime);
 }
