@@ -1,6 +1,6 @@
 function navigation() {
   if (location.hash.startsWith("#trends")) {
-    animeTrends();
+    animeRecomendations();
   } else if (location.hash.startsWith("#anime=")) {
     animeDetails();
   } else {
@@ -21,11 +21,12 @@ function homePage() {
   contentInfo.classList.add("inactive");
   categoryPreviewContainer.classList.add("inactive");
   animeTrendsList.classList.remove("inactive");
+  animeTrendsGallery.classList.add("inactive");
   footer.classList.remove("inactive");
   getAnimetrends();
 }
 
-function animeTrends() {
+function animeRecomendations() {
   body.classList.add("figures1");
   body.classList.remove("figures2");
   returnArrow.classList.remove("inactive");
@@ -36,8 +37,11 @@ function animeTrends() {
   contentInfo.classList.add("inactive");
   categoryPreviewContainer.classList.add("inactive");
   animeTrendsList.classList.add("inactive");
+  animeTrendsGallery.classList.remove("inactive");
   footer.classList.remove("inactive");
   console.log(returnArrow);
+
+  getRecommendedAnimes();
 }
 
 function animeDetails() {
@@ -50,12 +54,13 @@ function animeDetails() {
   contentSubTitle.classList.remove("inactive");
   contentInfo.classList.remove("inactive");
   categoryPreviewContainer.classList.remove("inactive");
-  genericList.classList.remove("inactive");
+  animeTrendsList.classList.remove("inactive");
+  animeTrendsGallery.classList.add("inactive");
   footer.classList.remove("inactive");
   console.log("Si");
 }
 
-genericListButton.addEventListener("click", () => {
+animeTrendsListButton.addEventListener("click", () => {
   location.hash = "#trends";
 });
 

@@ -267,11 +267,12 @@ main{
         margin: 0 2rem;
 
 
-        &--card{
+        &--container{
             width: fit-content;
             @extend .card-container;
             display: flex;
             flex-direction: column;
+            justify-content: center;
             align-items: center;
             margin: 1rem 0;
 
@@ -288,7 +289,7 @@ main{
 
             p{
                 font-weight: 600;
-                font-size: $small;
+                font-size: $very-small;
                 margin: .5rem 0;
             }
         }

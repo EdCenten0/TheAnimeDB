@@ -35,6 +35,8 @@ const animeTrendsListCardContainer = document.querySelector(
 const animeTrendsCardImage = document.querySelector(
   "#animeTrendsList #cardImage"
 );
+const animeTrendsGallery = document.querySelector("#animeTrends-gallery");
+
 const footer = document.getElementById("footer");
 
 console.log(animeTrendsList);
