@@ -12,8 +12,7 @@ async function createAnimeGenericList(animes, container) {
     const animeContainer = document.createElement("div");
     animeContainer.classList.add("card-container");
     animeContainer.addEventListener("click", () => {
-      location.hash = "#anime=";
-      // + anime.id;
+      location.hash = "#anime=" + anime.mal_id;
     });
 
     const animeImg = document.createElement("img");
@@ -30,7 +29,7 @@ async function getAnimetrends() {
   const { data } = await api("top/anime", {
     params: {
       type: "tv",
-      filter: "airing",
+      filter: "bypopularity",
       sfw: true,
     },
   });

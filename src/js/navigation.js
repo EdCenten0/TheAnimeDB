@@ -35,7 +35,7 @@ function animeTrends() {
   contentSubTitle.classList.add("inactive");
   contentInfo.classList.add("inactive");
   categoryPreviewContainer.classList.add("inactive");
-  animeTrendsList.classList.remove("inactive");
+  animeTrendsList.classList.add("inactive");
   footer.classList.remove("inactive");
   console.log(returnArrow);
 }

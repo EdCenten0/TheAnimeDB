@@ -260,10 +260,40 @@ main{
             height: 12px;
         }
     }
+
+    .anime-gallery{
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 18rem);
+        margin: 0 2rem;
+
+
+        &--card{
+            width: fit-content;
+            @extend .card-container;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 1rem 0;
+
+            img{
+                height: 22rem;
+                min-height: 22rem;
+                max-height: 22rem;
+                width: 15rem;
+                min-width: 15rem;
+                max-width: 15rem;
+                border-radius: 8px;
+                cursor: pointer; 
+            }
+
+            p{
+                font-weight: 600;
+                font-size: $small;
+                margin: .5rem 0;
+            }
+        }
+    }
 }
-
-//aside
-
 
 
 // Footer

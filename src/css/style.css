@@ -111,7 +111,7 @@ main .generic_list--carousel {
 main .generic_list--carousel::-webkit-scrollbar {
   width: 1rem;
 }
-main .generic_list--carousel .card-container {
+main .generic_list--carousel .card-container, main .generic_list--carousel .anime-gallery--card {
   display: inline-block;
   margin-right: 1rem;
 }
@@ -183,6 +183,33 @@ main .categoryPreview--container .category--title::before {
   margin-right: 8px;
   width: 12px;
   height: 12px;
+}
+main .anime-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 18rem);
+  margin: 0 2rem;
+}
+main .anime-gallery--card {
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1rem 0;
+}
+main .anime-gallery--card img {
+  height: 22rem;
+  min-height: 22rem;
+  max-height: 22rem;
+  width: 15rem;
+  min-width: 15rem;
+  max-width: 15rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+main .anime-gallery--card p {
+  font-weight: 600;
+  font-size: 2rem;
+  margin: 0.5rem 0;
 }
 
 .footer {
