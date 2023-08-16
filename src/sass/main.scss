@@ -227,12 +227,15 @@ main{
 
     .categoryPreview--container{
         margin: 0 2rem;
+        
 
         .categoriesPreview--title{
             font-size: $small;
         }
 
         .categoryPreview--list{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
             .category-container{
                 width: 45%;
             }

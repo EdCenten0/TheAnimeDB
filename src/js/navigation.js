@@ -46,7 +46,7 @@ function animeRecomendations() {
 
 function animeDetails() {
   body.classList.remove("figures1");
-  body.classList.add("figures2");
+  body.classList.add("figures1");
   returnArrow.classList.remove("inactive");
   headerPrincipal.classList.add("inactive");
   mainContentDescription.classList.remove("inactive");

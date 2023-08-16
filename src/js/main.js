@@ -5,6 +5,15 @@ const api = axios.create({
   },
 });
 
+function generarColorHexadecimalRandom() {
+  const letrasHex = "0123456789ABCDEF";
+  let color = "#";
+  for (let i = 0; i < 6; i++) {
+    color += letrasHex[Math.floor(Math.random() * 16)];
+  }
+  return color;
+}
+
 async function createAnimeGenericList(animes, container) {
   container.innerHTML = "";
 
@@ -65,6 +74,22 @@ async function setAnimeDetails(anime) {
   // });
 }
 
+async function setAnimeCategories(genres) {
+  genres.forEach((genre) => {
+    let colorRandom = generarColorHexadecimalRandom();
+
+    const categoryContainer = document.createElement("div");
+    const categoryName = document.createElement("div");
+    categoryContainer.classList.add("category-container");
+    categoryName.classList.add("category--title");
+
+    categoryName.innerText = genre.name;
+
+    categoryContainer.appendChild(categoryName);
+    categoryPreviewList.appendChild(categoryContainer);
+  });
+}
+
 async function getAnimetrends() {
   const { data } = await api("top/anime", {
     params: {
@@ -90,4 +115,5 @@ async function getAnimeDetailsById(id) {
   const anime = data.data;
 
   setAnimeDetails(anime);
+  setAnimeCategories(anime.genres);
 }

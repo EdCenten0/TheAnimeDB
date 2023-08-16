@@ -163,6 +163,10 @@ main .categoryPreview--container {
 main .categoryPreview--container .categoriesPreview--title {
   font-size: 2rem;
 }
+main .categoryPreview--container .categoryPreview--list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
 main .categoryPreview--container .categoryPreview--list .category-container {
   width: 45%;
 }
