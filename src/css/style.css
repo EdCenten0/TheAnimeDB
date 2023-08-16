@@ -128,7 +128,7 @@ main .generic_list--carousel .card-image {
 main .main--content_description {
   margin: 2rem 4rem;
   display: grid;
-  grid-template-columns: 1fr 10fr;
+  grid-template-columns: 2fr 10fr;
   gap: 3rem;
   width: fit-content;
 }

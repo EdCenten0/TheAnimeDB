@@ -52,12 +52,12 @@ async function createAnimeGallery(animes, container) {
 async function setAnimeDetails(anime) {
   // anime.forEach((anime) => {
 
-  contentAside.innerHTML = "";
+  contentAsideImg.innerHTML = "";
   contentTitle.innerHTML = "";
   contentSubTitle.innerHTML = "";
   contentInfo.innerHTML = "";
 
-  contentAside.setAttribute("src", anime.images.jpg.image_url);
+  contentAsideImg.setAttribute("src", anime.images.webp.large_image_url);
   contentAside.setAttribute("alt", anime.title);
   contentTitle.innerText = anime.title;
   contentSubTitle.innerText = "Produced by " + anime.producers[0].name;

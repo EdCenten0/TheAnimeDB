@@ -5,6 +5,7 @@ const mainContentDescription = document.getElementById(
   "mainContentDescription"
 );
 const contentAside = document.getElementById("contentAside");
+const contentAsideImg = document.querySelector("#contentAside img");
 const contentTitle = document.getElementById("contentTitle");
 const contentSubTitle = document.getElementById("contentSubTitle");
 const contentInfo = document.getElementById("contentInfo");
