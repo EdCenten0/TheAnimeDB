@@ -85,7 +85,8 @@ async function createAnimeSearchGallery(animes, container) {
 }
 
 async function setAnimeDetails(anime) {
-  // anime.forEach((anime) => {
+  console.log("Anime details");
+  console.log(anime);
 
   contentAsideImg.innerHTML = "";
   contentTitle.innerHTML = "";
@@ -95,12 +96,15 @@ async function setAnimeDetails(anime) {
   contentAsideImg.setAttribute("src", anime.images.webp.large_image_url);
   contentAside.setAttribute("alt", anime.title);
   contentTitle.innerText = anime.title;
-  contentSubTitle.innerText = "Produced by " + anime.producers[0].name;
+  contentSubTitle.innerText = "Produced by " + anime.producers[0]?.name;
+  if (contentSubTitle.innerText == "Produced by undefined") {
+    contentSubTitle.innerText = "Produced by " + anime.studios[0]?.name;
+  }
   contentInfo.innerText = anime.synopsis;
-  // });
 }
 
 async function setAnimeCategories(genres) {
+  categoryPreviewList.innerHTML = "";
   genres.forEach((genre) => {
     let colorRandom = generarColorHexadecimalRandom();
 
@@ -133,7 +137,7 @@ async function setCharactersByAnime(characters) {
 
     card_container.appendChild(characterImg);
     card_container.appendChild(characterName);
-    console.log(card_container);
+    // console.log(card_container);
 
     animeTrendsListCarousel.appendChild(card_container);
   });
