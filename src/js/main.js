@@ -60,6 +60,30 @@ async function createAnimeGallery(animes, container) {
   });
 }
 
+async function createAnimeSearchGallery(animes, container) {
+  container.innerHTML = "";
+  animes.forEach((anime) => {
+    const cardContainer = document.createElement("div");
+    cardContainer.classList.add("anime-gallery--container");
+
+    cardContainer.addEventListener("click", () => {
+      location.hash = "#anime=" + anime.mal_id;
+    });
+
+    const animeImg = document.createElement("img");
+    animeImg.setAttribute("class", "anime-gallery--container");
+
+    animeImg.setAttribute("src", anime.images.jpg.image_url);
+
+    const animeName = document.createElement("p");
+    animeName.innerText = anime.title;
+
+    cardContainer.append(animeImg, animeName);
+
+    container.appendChild(cardContainer);
+  });
+}
+
 async function setAnimeDetails(anime) {
   // anime.forEach((anime) => {
 
@@ -148,4 +172,15 @@ async function getAnimeCharacters(id) {
   console.log(data.data);
 
   setCharactersByAnime(data.data);
+}
+
+async function getAnimeBySearch(query) {
+  const { data } = await api(`anime`, {
+    params: {
+      q: query,
+    },
+  });
+
+  const results = data.data;
+  createAnimeSearchGallery(results, animeTrendsGallery);
 }

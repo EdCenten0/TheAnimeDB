@@ -81,6 +81,10 @@ function searchAnimeView() {
   animeTrendsList.classList.add("inactive");
   animeTrendsGallery.classList.remove("inactive");
   footer.classList.remove("inactive");
+
+  let [_, query] = location.hash.split("=");
+
+  getAnimeBySearch(query);
 }
 
 animeTrendsListButton.addEventListener("click", () => {
