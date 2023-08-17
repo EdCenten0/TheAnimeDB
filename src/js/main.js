@@ -16,6 +16,8 @@ function generarColorHexadecimalRandom() {
 
 async function createAnimeGenericList(animes, container) {
   container.innerHTML = "";
+  animeTrendsListTitle.innerText = "Top Animes";
+  animeTrendsListButton.classList.remove("inactive");
 
   animes.forEach((anime) => {
     const animeContainer = document.createElement("div");

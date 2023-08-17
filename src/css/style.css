@@ -177,7 +177,6 @@ main .categoryPreview--container .categoryPreview--list .category-container {
 }
 main .categoryPreview--container .category--title {
   margin-bottom: 8px;
-  cursor: pointer;
   white-space: nowrap;
   overflow: hidden;
   font-size: 1.5rem;
