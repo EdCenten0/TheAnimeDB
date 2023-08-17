@@ -157,7 +157,7 @@ main{
             overflow-x: scroll;
             overflow-y: hidden;
             white-space: nowrap;
-            height: 24rem;
+            height: 34rem;
             padding-left: 2rem;
             padding-bottom: 0rem;
             // max-width: calc(100vw - 38rem);
@@ -169,6 +169,12 @@ main{
             .card-container{
                 display: inline-block;
                 margin-right: 1rem;
+
+                p{
+                    text-align: center;
+                    font-size: $very-small;
+                    font-weight: 600;
+                }
             }
 
             .card-image{
@@ -181,6 +187,8 @@ main{
                 border-radius: 8px;
                 cursor: pointer;
             }
+
+
         }
     }
 

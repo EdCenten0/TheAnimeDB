@@ -104,7 +104,7 @@ main .generic_list--carousel {
   overflow-x: scroll;
   overflow-y: hidden;
   white-space: nowrap;
-  height: 24rem;
+  height: 34rem;
   padding-left: 2rem;
   padding-bottom: 0rem;
 }
@@ -114,6 +114,11 @@ main .generic_list--carousel::-webkit-scrollbar {
 main .generic_list--carousel .card-container, main .generic_list--carousel .anime-gallery--container {
   display: inline-block;
   margin-right: 1rem;
+}
+main .generic_list--carousel .card-container p, main .generic_list--carousel .anime-gallery--container p {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 600;
 }
 main .generic_list--carousel .card-image {
   height: 22rem;

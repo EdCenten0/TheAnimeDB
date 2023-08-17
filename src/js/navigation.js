@@ -61,6 +61,7 @@ function animeDetails() {
 
   let [_, animeId] = location.hash.split("=");
   getAnimeDetailsById(animeId);
+  getAnimeCharacters(animeId);
 }
 
 animeTrendsListButton.addEventListener("click", () => {
