@@ -3,6 +3,8 @@ function navigation() {
     animeRecomendations();
   } else if (location.hash.startsWith("#anime=")) {
     animeDetails();
+  } else if (location.hash.startsWith("#search=")) {
+    searchAnimeView();
   } else {
     homePage();
   }
@@ -15,6 +17,7 @@ function homePage() {
   body.classList.remove("figures2");
   returnArrow.classList.add("inactive");
   headerPrincipal.classList.remove("inactive");
+  headerPrincipal.classList.remove("searchHeader");
   mainContentDescription.classList.add("inactive");
   contentAside.classList.add("inactive");
   contentSubTitle.classList.add("inactive");
@@ -64,6 +67,22 @@ function animeDetails() {
   getAnimeCharacters(animeId);
 }
 
+function searchAnimeView() {
+  body.classList.add("figures1");
+  body.classList.remove("figures2");
+  returnArrow.classList.remove("inactive");
+  headerPrincipal.classList.remove("inactive");
+  headerPrincipal.classList.add("searchHeader");
+  mainContentDescription.classList.add("inactive");
+  contentAside.classList.add("inactive");
+  contentSubTitle.classList.add("inactive");
+  contentInfo.classList.add("inactive");
+  categoryPreviewContainer.classList.add("inactive");
+  animeTrendsList.classList.add("inactive");
+  animeTrendsGallery.classList.remove("inactive");
+  footer.classList.remove("inactive");
+}
+
 animeTrendsListButton.addEventListener("click", () => {
   location.hash = "#trends";
 });
@@ -75,6 +94,10 @@ animeTrendsCardImage.addEventListener("click", () => {
 returnArrow.addEventListener("click", () => {
   history.back();
   location.hash = "#home";
+});
+
+headerSearchButton.addEventListener("click", () => {
+  location.hash = "#search=" + headerInput.value;
 });
 
 window.addEventListener("hashchange", navigation, false);

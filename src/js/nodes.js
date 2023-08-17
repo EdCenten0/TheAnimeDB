@@ -1,6 +1,8 @@
 const body = document.getElementById("body");
 const returnArrow = document.getElementById("returnArrow");
 const headerPrincipal = document.getElementById("headerPrincipal");
+const headerInput = document.getElementById("headerInput");
+const headerSearchButton = document.getElementById("headerSearchButton");
 const mainContentDescription = document.getElementById(
   "mainContentDescription"
 );

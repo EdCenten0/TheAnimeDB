@@ -68,6 +68,7 @@ body {
 .header--principal section form div .header--search_button img {
   padding-top: 0.5rem;
   width: 70%;
+  pointer-events: none;
 }
 .header--principal section form div .header--search_button:hover {
   cursor: pointer;
@@ -258,6 +259,11 @@ main .anime-gallery--container p {
 
 .figures2 {
   background-image: url("./../imgs/Polygon 3.svg"), url("./../imgs/Polygon 4.svg");
+}
+
+.searchHeader {
+  background-image: none !important;
+  height: 12rem !important;
 }
 
 /*# sourceMappingURL=style.css.map */
