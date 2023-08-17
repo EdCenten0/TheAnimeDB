@@ -182,6 +182,7 @@ async function getAnimeBySearch(query) {
   const { data } = await api(`anime`, {
     params: {
       q: query,
+      type: "tv",
     },
   });
 
