@@ -1,0 +1,360 @@
+
+//Pallete
+$purple: #35155D;
+$light-purple: #512B81;
+$light-blue: #4477CE;
+$very-light-blue:#8CABFF;
+$yellowhish-white:#F6F4EB;
+$black:#252525;
+$white:#ffffff;
+
+//Font
+$font:'Dosis', sans-serif;
+$very-large:6rem;
+$large:5rem;
+$medium:3rem;
+$small:2rem;
+$very-small:1.5rem;
+
+//General
+
+html{
+    font-size: 62.5%;
+}
+
+*{
+    font-family: $font;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    // display: flex;
+}
+
+//Header
+
+.return--arrow{
+    margin: 1rem 0 0 0 ;
+    
+    // position: fixed;
+    z-index: 1;
+    img{
+        width: 5rem;
+        cursor: pointer;
+    }
+}
+
+.header--principal{
+    //background
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0, 0 ,0 , 0.5)),url('https://i.blogs.es/32a9c2/jujutsu-kaisen_img/1366_2000.jpeg');
+    background-size:cover;
+    height: 50rem;
+    background-repeat: no-repeat;
+    background-position-y: 50%;
+    
+
+    //Layout
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    
+    section{
+        width: 100%;
+
+        //Layout
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+
+        form{
+            .header--input{
+                width: 80vw;
+                height: 4rem;
+                border-radius: 12px 0 0 12px;
+                padding-left: 2rem;
+                font-size: $small;
+                color: $black;
+                border: none;
+                
+
+                &:focus{
+                    outline: solid $light-blue;
+                }
+
+                &::placeholder{
+                    color: #a8a7a7;
+                    font-size: $small;
+                    text-align: left;
+                    
+                }
+            }
+
+            div{
+                display: flex;
+                .header--search_button{
+                    width: 5rem;
+                    border-radius: 0 12px 12px 0;
+                    border: none;
+                    background-color: $light-purple;
+
+                    img{
+                        padding-top:.5rem;
+                        width: 70%;
+                        pointer-events: none;
+                    }
+                    
+                    &:hover{
+                        cursor: pointer;
+                    }
+                }
+            }
+            
+        }
+    }
+}
+
+//Main
+
+main{
+
+    .generic_list{
+        display: flex;
+        flex-direction: column;
+        margin: 0 2rem;
+        
+
+        &--header{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            h3{
+                color: #252525;
+                font-size: 2rem;
+                font-style: normal;
+                font-weight: 800;
+                line-height: normal;
+            }
+
+            button{
+                background-color: $light-purple;
+                color: $white;
+                width: 10rem;
+                font-weight: 600;
+                height: 3rem;
+                border-radius: 5px;
+                cursor: pointer;
+                border: none;
+
+            
+            }
+        }
+
+        &--carousel{
+            overflow-x: scroll;
+            overflow-y: hidden;
+            white-space: nowrap;
+            height: 34rem;
+            padding-left: 2rem;
+            padding-bottom: 0rem;
+            // max-width: calc(100vw - 38rem);
+
+            &::-webkit-scrollbar{
+                width: 1rem;
+            }
+
+            .card-container{
+                display: inline-block;
+                margin-right: 1rem;
+
+                p{
+                    text-align: center;
+                    font-size: $very-small;
+                    font-weight: 600;
+                }
+            }
+
+            .card-image{
+                height: 22rem;
+                min-height: 22rem;
+                max-height: 22rem;
+                width: 15rem;
+                min-width: 15rem;
+                max-width: 15rem;
+                border-radius: 8px;
+                cursor: pointer;
+            }
+
+
+        }
+    }
+
+    .main--content_description{
+        margin:  2rem 4rem;
+        display: grid;
+        grid-template-columns: 2fr 10fr;
+        gap: 3rem;
+        width: fit-content;
+        
+        .aside{
+            width: fit-content;
+            img{
+                border-radius: 4px;
+                border: solid 1px $black;
+                width: 100%;
+                height: 100%;
+                filter: blur(.5px) brightness(120%);
+            }
+        }
+
+        div{
+            h3{
+                margin: 0;
+                color: $black;
+                font-size: $medium;
+                margin-bottom: 0;
+                font-weight: 800;
+            }
+    
+            p{
+                color: $black;
+                font-size: $very-small;
+                font-weight: 300;
+            }
+    
+            .main--content_description--info{
+                p{
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+
+    .categoryPreview--container{
+        margin: 0 2rem;
+        
+
+        .categoriesPreview--title{
+            font-size: $small;
+        }
+
+        .categoryPreview--list{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            .category-container{
+                width: 45%;
+            }
+        }
+
+        .category--title{
+            margin-bottom: 8px;
+            white-space: nowrap;
+            overflow: hidden;
+            font-size: $very-small;
+            text-overflow: ellipsis;
+        }
+
+        .category--title::before{
+            content: "••••";
+            color: transparent;
+            /* TODO: cambiar color por ID de la categoría */
+            background-color: $purple;
+            border-radius: 5px;
+            margin-right: 8px;
+            width: 12px;
+            height: 12px;
+        }
+    }
+
+    .anime-gallery{
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 18rem);
+        margin: 0 2rem;
+
+
+        &--container{
+            width: fit-content;
+            @extend .card-container;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 1rem 0;
+
+            img{
+                height: 22rem;
+                min-height: 22rem;
+                max-height: 22rem;
+                width: 15rem;
+                min-width: 15rem;
+                max-width: 15rem;
+                border-radius: 8px;
+                cursor: pointer; 
+            }
+
+            p{
+                font-weight: 600;
+                font-size: $very-small;
+                margin: .5rem 0;
+            }
+        }
+    }
+}
+
+
+// Footer
+
+.footer{
+    background-color: $purple;
+    height: 12rem;
+    display: flex;
+    align-items: center;
+    // position: absolute;
+    // left: 0;
+    // right: 0;
+    width: 100%;
+    bottom: 0;
+    justify-content: space-around;
+
+    p{
+        color: $white;
+        font-size: $small;
+        font-weight: 600;
+    }
+    
+}
+
+.inactive{
+    display: none !important;
+}
+
+.header--title{
+    margin: 0;
+    color: $purple;
+    font-size: 4rem;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+    flex-shrink: 0;
+    // text-shadow: $white 1px 0px 10px ;
+    filter: brightness(180%);
+    -webkit-text-stroke: 1px $white;
+    
+}
+
+.figures1{
+    background-image: url("./../imgs/Polygon\ 1.svg"), url("./../imgs/Polygon\ 2.svg");
+}
+
+.figures2{
+    background-image: url("./../imgs/Polygon\ 3.svg"), url("./../imgs/Polygon\ 4.svg");
+}
+
+.searchHeader{
+    background-image: none !important;
+    height: 12rem !important;
+}

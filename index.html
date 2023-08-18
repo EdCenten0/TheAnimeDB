@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TheAnimeDB</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./src/css/style.css" />
+  </head>
+  <body id="body" class="figures1">
+    <section class="return--arrow inactive" id="returnArrow">
+      <img
+        src="./src/imgs/return-arrow.svg"
+        alt="return-arrow"
+        width="100px"
+        class=""
+      />
+    </section>
+    <header class="header--principal" id="headerPrincipal">
+      <section>
+        <form>
+          <h3 class="header--title">TheAnimeDB</h3>
+          <div>
+            <input
+              placeholder="AnimeDB"
+              type="text"
+              class="header--input"
+              id="headerInput"
+            />
+            <button
+              class="header--search_button"
+              id="headerSearchButton"
+              type="button"
+            >
+              <img src="./src/imgs/search.svg" alt="search" />
+            </button>
+          </div>
+        </form>
+      </section>
+    </header>
+
+    <main class="main--principal">
+      <section
+        class="main--content_description inactive"
+        id="mainContentDescription"
+      >
+        <aside class="aside" id="contentAside">
+          <img src="./src/imgs/banner.png" alt="banner" class="aside--banner" />
+        </aside>
+        <div>
+          <h3 id="contentTitle">Cowboy Bebbop</h3>
+          <p id="contentSubTitle">Produced by Bandai</p>
+          <div class="main--content_description--info">
+            <p id="contentInfo"></p>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="categoryPreview--container inactive"
+        id="categoryPreviewContainer"
+      >
+        <h3 class="categoriesPreview--title" id="categoriesPreviewTitle">
+          Categories
+        </h3>
+        <article
+          class="categoryPreview--list"
+          id="categoryPreviewList"
+        ></article>
+      </section>
+
+      <section class="generic_list" id="animeTrendsList">
+        <article class="generic_list--header" id="genericListHeader">
+          <h3 class="generic_list--title" id="genericListTitle">Top Animes</h3>
+          <button
+            type="submit"
+            class="generic_list--button"
+            id="genericListButton"
+          >
+            Ver más
+          </button>
+        </article>
+
+        <article class="generic_list--carousel" id="genericListCarousel">
+          <div class="card-container">
+            <img
+              src="https://i.blogs.es/32a9c2/jujutsu-kaisen_img/1366_2000.jpeg"
+              class="card-image"
+              id="cardImage"
+              alt="img"
+            />
+          </div>
+        </article>
+      </section>
+
+      <section class="anime-gallery inactive" id="animeTrends-gallery">
+        <div class="anime-gallery--container">
+          <img
+            src="https://i.blogs.es/32a9c2/jujutsu-kaisen_img/1366_2000.jpeg"
+            class="anime-gallery--card-img"
+            id="gallery-img"
+            alt="img"
+          />
+          <p>Jujutsu Kaisen</p>
+        </div>
+      </section>
+    </main>
+    <footer class="footer" id="footer">
+      <div class="footer--disclaimer">
+        <p>Developed by Carlos Chavarria Centeno - @EdCenten0</p>
+      </div>
+      <div class="footer--contact">
+        <p>Contact me on: cchavarriacenteno8@gmail.com</p>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./src/js/nodes.js"></script>
+    <script src="./src/js/main.js"></script>
+    <script src="./src/js/navigation.js"></script>
+  </body>
+</html>

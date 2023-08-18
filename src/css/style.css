@@ -1,0 +1,269 @@
+@charset "UTF-8";
+html {
+  font-size: 62.5%;
+}
+
+* {
+  font-family: "Dosis", sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.return--arrow {
+  margin: 1rem 0 0 0;
+  z-index: 1;
+}
+.return--arrow img {
+  width: 5rem;
+  cursor: pointer;
+}
+
+.header--principal {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://i.blogs.es/32a9c2/jujutsu-kaisen_img/1366_2000.jpeg");
+  background-size: cover;
+  height: 50rem;
+  background-repeat: no-repeat;
+  background-position-y: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header--principal section {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.header--principal section form .header--input {
+  width: 80vw;
+  height: 4rem;
+  border-radius: 12px 0 0 12px;
+  padding-left: 2rem;
+  font-size: 2rem;
+  color: #252525;
+  border: none;
+}
+.header--principal section form .header--input:focus {
+  outline: solid #4477CE;
+}
+.header--principal section form .header--input::placeholder {
+  color: #a8a7a7;
+  font-size: 2rem;
+  text-align: left;
+}
+.header--principal section form div {
+  display: flex;
+}
+.header--principal section form div .header--search_button {
+  width: 5rem;
+  border-radius: 0 12px 12px 0;
+  border: none;
+  background-color: #512B81;
+}
+.header--principal section form div .header--search_button img {
+  padding-top: 0.5rem;
+  width: 70%;
+  pointer-events: none;
+}
+.header--principal section form div .header--search_button:hover {
+  cursor: pointer;
+}
+
+main .generic_list {
+  display: flex;
+  flex-direction: column;
+  margin: 0 2rem;
+}
+main .generic_list--header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main .generic_list--header h3 {
+  color: #252525;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+}
+main .generic_list--header button {
+  background-color: #512B81;
+  color: #ffffff;
+  width: 10rem;
+  font-weight: 600;
+  height: 3rem;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+}
+main .generic_list--carousel {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+  height: 34rem;
+  padding-left: 2rem;
+  padding-bottom: 0rem;
+}
+main .generic_list--carousel::-webkit-scrollbar {
+  width: 1rem;
+}
+main .generic_list--carousel .card-container, main .generic_list--carousel .anime-gallery--container {
+  display: inline-block;
+  margin-right: 1rem;
+}
+main .generic_list--carousel .card-container p, main .generic_list--carousel .anime-gallery--container p {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+main .generic_list--carousel .card-image {
+  height: 22rem;
+  min-height: 22rem;
+  max-height: 22rem;
+  width: 15rem;
+  min-width: 15rem;
+  max-width: 15rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+main .main--content_description {
+  margin: 2rem 4rem;
+  display: grid;
+  grid-template-columns: 2fr 10fr;
+  gap: 3rem;
+  width: fit-content;
+}
+main .main--content_description .aside {
+  width: fit-content;
+}
+main .main--content_description .aside img {
+  border-radius: 4px;
+  border: solid 1px #252525;
+  width: 100%;
+  height: 100%;
+  filter: blur(0.5px) brightness(120%);
+}
+main .main--content_description div h3 {
+  margin: 0;
+  color: #252525;
+  font-size: 3rem;
+  margin-bottom: 0;
+  font-weight: 800;
+}
+main .main--content_description div p {
+  color: #252525;
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+main .main--content_description div .main--content_description--info p {
+  font-weight: 500;
+}
+main .categoryPreview--container {
+  margin: 0 2rem;
+}
+main .categoryPreview--container .categoriesPreview--title {
+  font-size: 2rem;
+}
+main .categoryPreview--container .categoryPreview--list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+main .categoryPreview--container .categoryPreview--list .category-container {
+  width: 45%;
+}
+main .categoryPreview--container .category--title {
+  margin-bottom: 8px;
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: 1.5rem;
+  text-overflow: ellipsis;
+}
+main .categoryPreview--container .category--title::before {
+  content: "••••";
+  color: transparent;
+  /* TODO: cambiar color por ID de la categoría */
+  background-color: #35155D;
+  border-radius: 5px;
+  margin-right: 8px;
+  width: 12px;
+  height: 12px;
+}
+main .anime-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 18rem);
+  margin: 0 2rem;
+}
+main .anime-gallery--container {
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 0;
+}
+main .anime-gallery--container img {
+  height: 22rem;
+  min-height: 22rem;
+  max-height: 22rem;
+  width: 15rem;
+  min-width: 15rem;
+  max-width: 15rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+main .anime-gallery--container p {
+  font-weight: 600;
+  font-size: 1.5rem;
+  margin: 0.5rem 0;
+}
+
+.footer {
+  background-color: #35155D;
+  height: 12rem;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  bottom: 0;
+  justify-content: space-around;
+}
+.footer p {
+  color: #ffffff;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.inactive {
+  display: none !important;
+}
+
+.header--title {
+  margin: 0;
+  color: #35155D;
+  font-size: 4rem;
+  font-style: normal;
+  font-weight: 900;
+  line-height: normal;
+  flex-shrink: 0;
+  filter: brightness(180%);
+  -webkit-text-stroke: 1px #ffffff;
+}
+
+.figures1 {
+  background-image: url("./../imgs/Polygon 1.svg"), url("./../imgs/Polygon 2.svg");
+}
+
+.figures2 {
+  background-image: url("./../imgs/Polygon 3.svg"), url("./../imgs/Polygon 4.svg");
+}
+
+.searchHeader {
+  background-image: none !important;
+  height: 12rem !important;
+}
+
+/*# sourceMappingURL=style.css.map */
