@@ -138,6 +138,14 @@ main .main--content_description {
   gap: 3rem;
   width: fit-content;
 }
+@media screen and (max-width: 768px) {
+  main .main--content_description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
 main .main--content_description .aside {
   width: fit-content;
 }
@@ -198,6 +206,11 @@ main .anime-gallery {
   grid-template-columns: repeat(auto-fill, 18rem);
   margin: 0 2rem;
 }
+@media screen and (max-width: 468px) {
+  main .anime-gallery {
+    grid-template-columns: repeat(auto-fill, 16rem);
+  }
+}
 main .anime-gallery--container {
   width: fit-content;
   display: flex;
@@ -233,7 +246,7 @@ main .anime-gallery--container p {
 }
 .footer p {
   color: #ffffff;
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 600;
 }
 
