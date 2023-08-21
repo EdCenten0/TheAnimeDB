@@ -250,10 +250,6 @@ main .anime-gallery--container p {
   font-weight: 600;
 }
 
-.inactive {
-  display: none !important;
-}
-
 .header--title {
   margin: 0;
   color: #35155D;
@@ -264,6 +260,10 @@ main .anime-gallery--container p {
   flex-shrink: 0;
   filter: brightness(180%);
   -webkit-text-stroke: 1px #ffffff;
+}
+
+.inactive {
+  display: none !important;
 }
 
 .figures1 {
@@ -277,6 +277,28 @@ main .anime-gallery--container p {
 .searchHeader {
   background-image: none !important;
   height: 12rem !important;
+}
+
+.card-container--loading {
+  background: #252525;
+  border-radius: 8px;
+  height: 22.5rem;
+  min-height: 22.5rem;
+  max-height: 22.5rem;
+  width: 15rem;
+  min-width: 15rem;
+  max-width: 15rem;
+  margin-bottom: 1.5rem;
+  animation: loading-skeleton infinite 1.5s;
+}
+
+@keyframes loading-skeleton {
+  0%, 100% {
+    opacity: 100%;
+  }
+  50% {
+    opacity: 0%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

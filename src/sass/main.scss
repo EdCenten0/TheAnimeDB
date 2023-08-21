@@ -339,9 +339,6 @@ main{
     
 }
 
-.inactive{
-    display: none !important;
-}
 
 .header--title{
     margin: 0;
@@ -357,6 +354,12 @@ main{
     
 }
 
+// Utils
+
+.inactive{
+    display: none !important;
+}
+
 .figures1{
     background-image: url("./../imgs/Polygon\ 1.svg"), url("./../imgs/Polygon\ 2.svg");
 }
@@ -369,3 +372,30 @@ main{
     background-image: none !important;
     height: 12rem !important;
 }
+
+.card-container--loading{
+    background: $black;
+    border-radius: 8px;
+    height: 22.5rem;
+    min-height: 22.5rem;
+    max-height: 22.5rem;
+    width: 15rem;
+    min-width: 15rem;
+    max-width: 15rem;
+    margin-bottom: 1.5rem;
+    animation: loading-skeleton infinite 1.5s;
+}
+
+
+// Animations
+
+@keyframes loading-skeleton {
+    0%,
+    100% {
+      opacity: 100%;
+    }
+  
+    50% {
+      opacity: 0%;
+    }
+  }

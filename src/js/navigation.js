@@ -91,10 +91,6 @@ animeTrendsListButton.addEventListener("click", () => {
   location.hash = "#trends";
 });
 
-animeTrendsCardImage.addEventListener("click", () => {
-  location.hash = "#anime=";
-});
-
 returnArrow.addEventListener("click", () => {
   history.back();
   location.hash = "#home";
