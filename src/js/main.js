@@ -59,7 +59,7 @@ async function createAnimeGenericList(animes, container, lazyLoad = false) {
   });
 }
 
-async function createAnimeGallery(animes, container) {
+async function createAnimeGallery(animes, container, lazyLoad = false) {
   container.innerHTML = "";
   animes.forEach((anime) => {
     const cardContainer = document.createElement("div");
@@ -72,7 +72,10 @@ async function createAnimeGallery(animes, container) {
     const animeImg = document.createElement("img");
     animeImg.setAttribute("class", "anime-gallery--container");
 
-    animeImg.setAttribute("src", anime.entry[0].images.jpg.image_url);
+    animeImg.setAttribute(
+      lazyLoad ? "data-img" : "src",
+      anime.entry[0].images.jpg.image_url
+    );
 
     const animeName = document.createElement("p");
     animeName.innerText = anime.entry[0].title;
@@ -86,11 +89,15 @@ async function createAnimeGallery(animes, container) {
       );
     });
 
+    if (lazyLoad) {
+      lazyLoader.observe(animeImg);
+    }
+
     container.appendChild(cardContainer);
   });
 }
 
-async function createAnimeSearchGallery(animes, container) {
+async function createAnimeSearchGallery(animes, container, lazyLoad = false) {
   container.innerHTML = "";
   animes.forEach((anime) => {
     const cardContainer = document.createElement("div");
@@ -103,7 +110,10 @@ async function createAnimeSearchGallery(animes, container) {
     const animeImg = document.createElement("img");
     animeImg.setAttribute("class", "anime-gallery--container");
 
-    animeImg.setAttribute("src", anime.images.jpg.image_url);
+    animeImg.setAttribute(
+      lazyLoad ? "data-img" : "src",
+      anime.images.jpg.image_url
+    );
 
     const animeName = document.createElement("p");
     animeName.innerText = anime.title;
@@ -114,6 +124,10 @@ async function createAnimeSearchGallery(animes, container) {
         "https://static.vecteezy.com/system/resources/thumbnails/003/678/259/small/triangle-caution-yellow-sign-icon-free-vector.jpg"
       );
     });
+
+    if (lazyLoad) {
+      lazyLoader.observe(animeImg);
+    }
 
     cardContainer.append(animeImg, animeName);
 
@@ -211,7 +225,7 @@ async function getAnimetrends() {
 async function getRecommendedAnimes() {
   const { data } = await api("recommendations/anime");
   const animes = data.data;
-  createAnimeGallery(animes, animeTrendsGallery);
+  createAnimeGallery(animes, animeTrendsGallery, true);
 }
 
 async function getAnimeDetailsById(id) {
@@ -238,5 +252,5 @@ async function getAnimeBySearch(query) {
   });
 
   const results = data.data;
-  createAnimeSearchGallery(results, animeTrendsGallery);
+  createAnimeSearchGallery(results, animeTrendsGallery, true);
 }
