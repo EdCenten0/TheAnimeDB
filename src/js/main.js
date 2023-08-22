@@ -47,6 +47,13 @@ async function createAnimeGenericList(animes, container, lazyLoad = false) {
       lazyLoader.observe(animeImg);
     }
 
+    animeImg.addEventListener("error", () => {
+      animeImg.setAttribute(
+        "src",
+        "https://static.vecteezy.com/system/resources/thumbnails/003/678/259/small/triangle-caution-yellow-sign-icon-free-vector.jpg"
+      );
+    });
+
     animeContainer.appendChild(animeImg);
     container.appendChild(animeContainer);
   });
@@ -72,6 +79,13 @@ async function createAnimeGallery(animes, container) {
 
     cardContainer.append(animeImg, animeName);
 
+    animeImg.addEventListener("error", () => {
+      animeImg.setAttribute(
+        "src",
+        "https://static.vecteezy.com/system/resources/thumbnails/003/678/259/small/triangle-caution-yellow-sign-icon-free-vector.jpg"
+      );
+    });
+
     container.appendChild(cardContainer);
   });
 }
@@ -93,6 +107,13 @@ async function createAnimeSearchGallery(animes, container) {
 
     const animeName = document.createElement("p");
     animeName.innerText = anime.title;
+
+    animeImg.addEventListener("error", () => {
+      animeImg.setAttribute(
+        "src",
+        "https://static.vecteezy.com/system/resources/thumbnails/003/678/259/small/triangle-caution-yellow-sign-icon-free-vector.jpg"
+      );
+    });
 
     cardContainer.append(animeImg, animeName);
 
@@ -157,6 +178,13 @@ async function setCharactersByAnime(characters, lazyLoad = false) {
     if (lazyLoad) {
       lazyLoader.observe(characterImg);
     }
+
+    characterImg.addEventListener("error", () => {
+      characterImg.setAttribute(
+        "src",
+        "https://static.vecteezy.com/system/resources/thumbnails/003/678/259/small/triangle-caution-yellow-sign-icon-free-vector.jpg"
+      );
+    });
 
     card_container.appendChild(characterImg);
     card_container.appendChild(characterName);
