@@ -5,6 +5,15 @@ const api = axios.create({
   },
 });
 
+const lazyLoader = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      const url = entry.target.getAttribute("data-img");
+      entry.target.setAttribute("src", url);
+    }
+  });
+});
+
 function generarColorHexadecimalRandom() {
   const letrasHex = "0123456789ABCDEF";
   let color = "#";
@@ -14,7 +23,7 @@ function generarColorHexadecimalRandom() {
   return color;
 }
 
-async function createAnimeGenericList(animes, container) {
+async function createAnimeGenericList(animes, container, lazyLoad = false) {
   container.innerHTML = "";
   animeTrendsListTitle.innerText = "Top Animes";
   animeTrendsListButton.classList.remove("inactive");
@@ -29,7 +38,14 @@ async function createAnimeGenericList(animes, container) {
     const animeImg = document.createElement("img");
     animeImg.classList.add("card-image");
     animeImg.setAttribute("alt", anime.title);
-    animeImg.setAttribute("src", anime.images.jpg.image_url);
+    animeImg.setAttribute(
+      lazyLoad ? "data-img" : "src",
+      anime.images.jpg.image_url
+    );
+
+    if (lazyLoad) {
+      lazyLoader.observe(animeImg);
+    }
 
     animeContainer.appendChild(animeImg);
     container.appendChild(animeContainer);
@@ -154,7 +170,7 @@ async function getAnimetrends() {
 
   const animes = data.data;
   console.log(data);
-  createAnimeGenericList(animes, animeTrendsListCarousel);
+  createAnimeGenericList(animes, animeTrendsListCarousel, true);
 }
 
 async function getRecommendedAnimes() {
