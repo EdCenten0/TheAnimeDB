@@ -136,7 +136,7 @@ async function setAnimeCategories(genres) {
   });
 }
 
-async function setCharactersByAnime(characters) {
+async function setCharactersByAnime(characters, lazyLoad = false) {
   animeTrendsListCarousel.innerHTML = "";
   characters.forEach((character) => {
     animeTrendsListTitle.innerText = "Characters";
@@ -146,10 +146,17 @@ async function setCharactersByAnime(characters) {
     card_container.classList.add("card-container");
     const characterImg = document.createElement("img");
     characterImg.classList.add("card-image");
-    characterImg.setAttribute("src", character.character.images.jpg.image_url);
+    characterImg.setAttribute(
+      lazyLoad ? "data-img" : "src",
+      character.character.images.jpg.image_url
+    );
     characterImg.setAttribute("alt", character.character.name);
     const characterName = document.createElement("p");
     characterName.innerText = character.character.name;
+
+    if (lazyLoad) {
+      lazyLoader.observe(characterImg);
+    }
 
     card_container.appendChild(characterImg);
     card_container.appendChild(characterName);
@@ -191,7 +198,7 @@ async function getAnimeCharacters(id) {
   const { data } = await api(`anime/${id}/characters`);
   console.log(data.data);
 
-  setCharactersByAnime(data.data);
+  setCharactersByAnime(data.data, true);
 }
 
 async function getAnimeBySearch(query) {
